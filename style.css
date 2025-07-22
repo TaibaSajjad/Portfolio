@@ -399,6 +399,14 @@ section {
   border-radius: 4px;
   transition: width 1s ease-in-out;
 }
+.image-note {
+  text-align: center;
+  font-size: 1rem;
+  color: blue;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
 
 /* Projects Section */
 .project-category {
@@ -660,6 +668,15 @@ footer p {
 }
 
 @media (max-width: 768px) {
+  .skills-container {
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.skill-category {
+  padding: 1rem;
+}
   nav {
     padding: 1rem;
     flex-direction: column;
@@ -689,6 +706,7 @@ footer p {
     max-width: 280px;
     justify-content: center;
   }
+
   
   .project-grid {
      grid-template-columns: repeat(2, 1fr);
@@ -714,6 +732,20 @@ footer p {
 }
 
 @media (max-width: 480px) {
+  .skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tool-item {
+  padding: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.hero{
+  margin-top: 40px;
+}
   .hero-title {
     font-size: 2rem;
   }
@@ -739,7 +771,31 @@ footer p {
   .project-card img {
     height: 200px;
   }
-  
+  .info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.info-item:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow-light);
+}
+
+.info-item strong {
+  font-size: 14px;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.info-item span {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
   nav {
     padding: 0.75rem;
   }
@@ -747,7 +803,20 @@ footer p {
   .nav-links {
     gap: 0.5rem;
   }
-  
+  .project-card img {
+    height: 160px; /* Reduce to free space for text */
+    object-fit: cover;
+  }
+
+  .project-card-content {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    background-color: #fff;
+    color: #000;
+    display: block;
+    overflow: visible;
+    text-align: center;
+  }
   .nav-links a {
     font-size: 0.9rem;
   }
@@ -755,6 +824,7 @@ footer p {
   .floating-shape {
     display: none;
   }
+
 }
 
 /* Print styles */
